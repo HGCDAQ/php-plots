@@ -103,10 +103,11 @@ def drawIt(key, obj):
     c1.SaveAs(fullDir+'/'+histName+'.png')
 
     # For some specific plots, we save them also in the main directory:
-    if any(word in histName for word in ["hexagons_occ_HA_bit", "p_waveform_HG"]):
+    if any(word in histName for word in ["hexagons_occ_selection", "p_waveform_HG"]):
         fullDir = opt.outdir+'/'.join(key.split('/')[0])
         c1.SaveAs(fullDir+'/'+histName+'.png')
-    if any (word in histName for word in ["h_corrTOA", "h_hitmap_Calice", "XYmap_WireChamber","h_XXmap", "h_YYmap", "h_hgcal_ski1_ch36"]):
+    if any (word in histName for word in ["h_corrTOA", "h_hitmap_Calice", "XYmap_WireChamber","h_XXmap", "h_YYmap",
+                                          "h_hgcal_ski0_ch36", "h_hgcal_ski1_ch36", "h_hgcal_ski2_ch36", "h_hgcal_ski1_ch38"]):
         fullDir = opt.outdir+'/'.join(key.split('/')[0:2])
         c1.SaveAs(fullDir+'/'+histName+'.png')
     
