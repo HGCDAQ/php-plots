@@ -1,4 +1,3 @@
-# HGCALBeamTests
-Scripts written by Jonas in the context of the July 2017 beam tests at CERN.
+# Info
 
-Those scripts were executed at the end of each run 
+Few scripts written to read DQM root file and make plots. It is to be executed at the end of run.
