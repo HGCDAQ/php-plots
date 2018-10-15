@@ -4,7 +4,7 @@ source /afs/cern.ch/sw/lcg/external/gcc/4.9/x86_64-slc6-gcc49-opt/setup.sh
 source /afs/cern.ch/sw/lcg/app/releases/ROOT/6.06.08/x86_64-slc6-gcc49-opt/root/bin/thisroot.sh
 
 
-RUN=$(printf %04d $1)
+RUN=$(printf %04d $(( 10#$1 )))
 
 
 echo "Will ran scripts for RUN: ${RUN}"
@@ -28,7 +28,7 @@ if [ "${reMade}" == "1" ]; then
     /home/daq/web_dqm/scripts/plot.py -f /home/daq/eudaq-shift/data_root/remade/dqm_run00${RUN}.root -o /home/daq/web_dqm/RUN_${RUN}_OnlineMon/
 else
     #echo "else"
-    /home/daq/web_dqm/scripts/plot.py -f /home/daq/eudaq-shift/data_root/dqm_run00${RUN}.root -o /home/daq/web_dqm/RUN_${RUN}_OnlineMon/
+    /home/daq/web_dqm/scripts/plot.py -f /home/daq/eudaq-shift/data_root/dqm_run${RUN}.root -o /home/daq/web_dqm/RUN_${RUN}_OnlineMon/
 
 fi
     
